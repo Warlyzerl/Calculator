@@ -1,9 +1,10 @@
 body {
-    background-color: #f2e9e4;
+    background-color: #da9672;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    font-family: 'Quicksand', sans-serif;
 }
 
 #header {
@@ -16,7 +17,7 @@ body {
     height: 480px;
     border-radius: 20px;
     box-shadow: 5px 5px;
-    color: #c9c0bc;
+    color: #a96e4e;
     display: flex;
     flex-direction: column;
 }
@@ -44,6 +45,17 @@ body {
     background-color: gray;
     margin: 5px;
     flex-grow: 1;
+    letter-spacing: 1px;
+}
+
+#input {
+    font-size: 20px;
+}
+
+#output {
+    margin-top: 0px;
+    font-size: 38px;
+    color: white;
 }
 
 #keypad {
@@ -65,15 +77,28 @@ body {
     width: 120px;
     height: 60px;
     border-radius: 10px;
+    font-weight: 400;
+}
+
+#clear{
+    color: rgb(239, 60, 60);
+}
+
+#delete{
+    color: rgb(47, 47, 238);
 }
 
 #clear-delete {
     display: flex;
     gap: 15px;
+    font-weight: 400;
 }
 
 button {
     height: 60px;
     border-radius: 50%;
     width: 60px;
+    background-color: #c9c0bc;
+    font-family: 'Quicksand', sans-serif;
+    font-size: large;
 }

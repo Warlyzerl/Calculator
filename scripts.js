@@ -30,12 +30,19 @@ function operate(){
                 result = divide(firstOperand, secondOperand);
                 break;
         }
+    if (result.toString().includes('.')) {
+        result = result.toFixed(2);
+    }
+    if (result.toString().length > 11) {
+        result = result.toExponential(4);
+    }
     updateOutputDisplay();
     firstOperand = result;
     secondOperand = ''
     operator = '';
     previousResult = true;
     operatorPressed = false;
+    displayValue = '';
     }
 }
 let displayValue = '';
@@ -55,12 +62,13 @@ function updateOperand () {
         else {
             displayValue = this.innerText;
         }
+        updateInputDisplay();
     }
-    else {
+    else if (operator) {
         secondOperand = secondOperand.concat(this.innerText);
         displayValue = displayValue.concat(this.innerText)
+        updateInputDisplay();
     }
-    updateInputDisplay();
 }
 
 const numberButtons = document.querySelectorAll('#number');
